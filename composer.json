@@ -1,8 +1,8 @@
 {
-    "name": "brave-sir-robin/amqphp",
-    "description": "AMQP 0.9.1 Protocol Implementation in pure PHP",
+    "name": "innogames/amqphp",
+    "description": "AMQP 0.9.6 Protocol Implementation in pure PHP",
     "keywords": ["AMQPHP","AMQP", "RabbitMQ"],
-    "homepage": "https://github.com/BraveSirRobin/amqphp/",
+    "homepage": "https://github.com/innogames/amqphp/",
     "type": "library",
     "license": "LGPL",
     "authors": [
