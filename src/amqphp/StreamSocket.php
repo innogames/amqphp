@@ -101,11 +101,10 @@ class StreamSocket
                                            ini_get("default_socket_timeout"), 
                                            $flags, $context);
 
-        $this->stfp = ftell($this->sock);
-
         if (! $this->sock) {
             throw new \Exception("Failed to connect stream socket {$this->url}, ($errno, $errstr): flags $flags", 7568);
         } else if (($flags & STREAM_CLIENT_PERSISTENT) && $this->stfp > 0) {
+            $this->stfp = ftell($this->sock);
             foreach (self::$All as $sock) {
                 if ($sock !== $this && $sock->getCK() == $this->getCK()) {
                     /* TODO: Investigate whether mixing persistent and
